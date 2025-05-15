@@ -1,0 +1,6 @@
+
+<form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">修正する</button>
+</form>
+<a href="{% url 'list-employee' %}">一覧へ戻る</a>

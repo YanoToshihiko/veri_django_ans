@@ -1,0 +1,5 @@
+<form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">{{object.no}}{{object.name}}を削除する</button>
+</form>
+<a href="{% url 'list-employee' %}">一覧へ戻る</a>

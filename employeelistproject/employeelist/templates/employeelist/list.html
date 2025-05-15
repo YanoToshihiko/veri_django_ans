@@ -10,7 +10,27 @@
         <td>{{ item.no }}</td>
         <td>{{ item.name }}</td>
         <td>{{ item.salary }}</td>
+         <td>
+            <a href="{% url 'detail-employee' item.pk %}">詳細</a> |
+            <a href="{% url 'update-employee' item.pk %}">編集</a> |
+            <a href="{% url 'delete-employee' item.pk %}">削除</a>
+        </td>
     </tr>
     {% endfor %}
 </table>
+
+{% if is_paginated %}
+<br>
+<br>
+<div class="pagination">
+    <span class="step-links">
+        {% include 'employeelist/components/pagination.html' %}
+    </span>
+</div>
+{% endif %}
+
+<br>
+<a href="{% url 'create-employee' %}">新規社員登録</a>
+<br>
+<a href="{% url 'contact-employee' %}">お問い合わせ</a>
 

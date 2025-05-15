@@ -4,6 +4,8 @@ from django.views.generic import TemplateView
 
 
 def login_view(request):
+    """ログインビュー
+    ユーザー名は 'hruser' で始まる必要があります。"""
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']

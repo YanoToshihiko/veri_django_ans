@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>{% block title %}楽しい我が家{% endblock %}</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <a href="{% url 'livingroom-home' %}">リビング</a>
-            <a href="{% url 'window-side' %}">リビング窓側</a>
-            <a href="{% url 'kitchen-home' %}">キッチン</a>
-        </nav>
+      <nav>
+        <a href="{% url 'livingroom-home' %}">リビング</a>
+        <a href="{% url 'window-side' %}">リビング窓側</a>
+        <a href="{% url 'kitchen-home' %}">キッチン</a>
+      </nav>
     </header>
-    <main>
-        {% block content %}
-        {% endblock content %}
-    </main>
-</body>
+    <main>{% block content %} {% endblock content %}</main>
+    <script>
+      alert("リビングの窓側ページへようこそ！");
+    </script>
+  </body>
 </html>
